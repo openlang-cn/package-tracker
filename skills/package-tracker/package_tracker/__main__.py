@@ -6,7 +6,7 @@ import sys
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Package Tracker (Kdniao)")
+    parser = argparse.ArgumentParser(description="Package Tracker")
     sub = parser.add_subparsers(dest="command", required=True)
     track_parser = sub.add_parser("track", help="Track by shipper code and logistic code")
     track_parser.add_argument("shipper_code", help="e.g. ZTO, SF, YTO")
@@ -26,10 +26,6 @@ def main() -> None:
         help="Output raw JSON only",
     )
     args = parser.parse_args()
-
-    if args.command != "track":
-        parser.print_help()
-        sys.exit(1)
 
     try:
         from package_tracker import get_tracker

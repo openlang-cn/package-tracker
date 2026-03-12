@@ -2,7 +2,12 @@
 name: package-tracker
 description: Query package/express tracking worldwide via unified API. Integrates with 快递鸟 (Kdniao) and is extensible to other providers. Use when the user asks to track a parcel, query logistics, look up express by tracking number, or integrate courier tracking.
 homepage: https://github.com/openlang-cn/package-tracker.git
-metadata: {"openclaw":{"emoji":"📦","homepage":"https://github.com/openlang-cn/package-tracker.git","requires":{"bins":["python"]}}}
+metadata:
+  openclaw:
+    emoji: "📦"
+    homepage: https://github.com/openlang-cn/package-tracker.git
+    requires:
+      bins: ["python"]
 ---
 
 # Package Tracker
@@ -44,8 +49,8 @@ Do not put API keys in code; store them in `package_tracker.json` (and avoid com
 
 ## Adding Another Provider
 
-1. Add a new module under `package_tracker/providers/` implementing the same track interface (e.g. `track(shipper_code, logistic_code, **kwargs) -> dict`).
-2. Register in `package_tracker/__init__.py` and select by config (set `default`) or pass `provider=...` in `get_tracker(...)`.
+1. Add a new module under `package_tracker/` implementing the same track interface (e.g. `track(shipper_code, logistic_code, **kwargs) -> dict`).
+2. Register it in `package_tracker/registry.py`, then select it via config (`default`) or pass `provider=...` in `get_tracker(...)`.
 
 ## Reference
 

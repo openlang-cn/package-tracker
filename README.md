@@ -25,6 +25,7 @@ Query package/express tracking worldwide via unified API. Integrates with 快递
 
 ```bash
 # 使用配置中的默认供应商查询
+cd skills/package-tracker
 python -m package_tracker track ZTO 638650888018
 
 # 指定供应商与配置文件
@@ -75,15 +76,9 @@ result = tracker.track(
 package-tracker/
 ├── skills/package-tracker/          # ClawHub 技能（可发布到 clawhub.com）
 │   └── SKILL.md
-├── package_tracker/
-│   ├── __init__.py      # 对外导出 get_tracker, KdniaoTracker
-│   ├── base.py          # 统一 Tracker 接口
-│   ├── config.py        # JSON 配置加载，默认供应商
-│   ├── kdniao.py        # 快递鸟即时查询实现
-│   ├── registry.py      # 按配置选择 provider
-│   └── __main__.py      # CLI
-├── package_tracker.json.example
-├── requirements.txt
+│   ├── package_tracker/             # 技能内自包含 Python 包 + CLI
+│   ├── package_tracker.json.example
+│   └── requirements.txt
 ├── CLAWHUB.md         # ClawHub 发布说明
 └── README.md
 ```
@@ -94,8 +89,8 @@ package-tracker/
 
 ## 扩展其他快递 API
 
-1. 在 `package_tracker/` 下新增 provider 模块，实现 `BaseTracker` 的 `track(...)`。
-2. 在 `registry.py` 中注册并可通过 `provider` 参数选择（或在 JSON 里设置 `default`）。
+1. 在 `skills/package-tracker/package_tracker/` 下新增 provider 模块，实现 `BaseTracker` 的 `track(...)`。
+2. 在 `skills/package-tracker/package_tracker/registry.py` 中注册并可通过 `provider` 参数选择（或在 JSON 里设置 `default`）。
 
 ## 快递鸟说明
 
