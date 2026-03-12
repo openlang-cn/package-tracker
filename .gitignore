@@ -1,0 +1,24 @@
+## Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+## Virtual envs
+.venv/
+venv/
+ENV/
+env/
+
+## Local config / secrets
+package_tracker.json
+
+## ClawHub / OpenClaw
+.clawhub/
+
+## OS / editor
+.DS_Store
+Thumbs.db
