@@ -2,6 +2,8 @@
 
 统一快递/物流查询，可扩展接入多家快递 API。当前已接入 **快递鸟 (Kdniao)** 即时查询。
 
+Query package/express tracking worldwide via unified API. Integrates with 快递鸟 (Kdniao) and is extensible to other providers.
+
 ## 环境准备
 
 1. 在 [快递鸟](https://www.kdniao.com/) 注册并开通「即时查询」。
