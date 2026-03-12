@@ -8,7 +8,7 @@ Query package/express tracking worldwide via unified API. Integrates with 快递
 
 1. 在 [快递鸟](https://www.kdniao.com/) 注册并开通「即时查询」。
 2. 获取 **商户 ID (EBusinessID)** 和 **ApiKey**。
-3. **配置文件（JSON）**：复制 `package_tracker.json.example` 为 `package_tracker.json`，填写 `default` 与 `providers.kdniao`。
+3. **配置文件（JSON）**：复制 `skills/package-tracker/package_tracker.json.example` 为 `package_tracker.json`，填写 `default` 与 `providers.kdniao`。
 
 ## 配置（JSON）
 
@@ -17,7 +17,7 @@ Query package/express tracking worldwide via unified API. Integrates with 快递
 - **default**：默认供应商，不指定 `--provider` 时使用。
 - **providers**：各供应商的选项（如 `kdniao` 的 `ebusiness_id`、`api_key`、`sandbox`，以及可选的 `api_url` / `sandbox_url` / `request_type` 用于覆盖默认接口参数）。
 
-示例见 `package_tracker.json.example`。
+示例见 `skills/package-tracker/package_tracker.json.example`。
 
 ## 使用方式
 
