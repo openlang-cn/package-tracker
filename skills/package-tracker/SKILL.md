@@ -21,6 +21,7 @@ Helps implement and use a unified package tracking layer that can integrate mult
 
 2. **Query** (Python):
    ```bash
+   # Run in the skill directory (where this SKILL.md lives)
    python -m package_tracker track <ShipperCode> <LogisticCode>
    # e.g. python -m package_tracker track ZTO 638650888018
    ```
@@ -49,4 +50,4 @@ Do not put API keys in code; store them in `package_tracker.json` (and avoid com
 ## Reference
 
 - 快递鸟即时查询: [API 文档](https://www.kdniao.com/api-track)
-- 完整实现（CLI + Python 包、JSON 配置）见仓库根目录 `package_tracker/` 与 `README.md`；通过 ClawHub 仅安装本技能时，需另行克隆该仓库或安装对应包。
+- 本技能目录内已包含可运行的 `package_tracker/`（CLI + Python 包）与示例配置文件；安装到 ClawHub 后无需额外 clone 仓库即可直接执行上述命令。
